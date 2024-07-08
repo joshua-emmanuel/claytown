@@ -1,0 +1,68 @@
+.about-us {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #1c1c1c;
+  margin-block: 2rem;
+}
+
+.about-us h2 {
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.about-us__content > * + * {
+  margin-top: 1rem;
+}
+
+.about-us__content button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  border: 1px solid rgba(28, 28, 28, 0.38);
+  background-color: rgba(251, 196, 124, 0.58);
+  margin-top: 2rem;
+}
+
+@media (min-width: 50em) {
+  .about-us h2 {
+    font-size: 4.125rem;
+  }
+
+  .about-us__content {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .about-us__content > * + * {
+    margin-top: 3rem;
+  }
+
+  .about-us__content img {
+    width: 45rem;
+  }
+}
+
+@media (min-width: 80em) {
+  .about-us__content {
+    position: relative;
+  }
+
+  .about-us__content div {
+    position: absolute;
+    max-width: 22ch;
+  }
+
+  .about-us__content div:first-child {
+    left: 5%;
+    top: 2rem;
+  }
+
+  .about-us__content div:last-child {
+    right: 4rem;
+    bottom: -2rem;
+  }
+
+  .about-us__content img {
+    width: 45rem;
+  }
+}
