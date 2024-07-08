@@ -1,8 +1,10 @@
+import ancientPottery from '../assets/img/ancient-pottery.jpg';
+
 const products = [
   {
     name: 'Ancient',
     price: 11000,
-    img: '/src/assets/img/ancient-pottery.jpg',
+    img: ancientPottery,
   },
   {
     name: 'Still life pottery',
