@@ -8,8 +8,7 @@
 }
 
 .header__logo img {
-  width: 10rem;
-  margin-left: -1.5rem;
+  width: 12rem;
 }
 
 .header__nav .flex {
@@ -18,9 +17,9 @@
 
 .header__nav li {
   font-size: 2.1875rem;
-  font-weight: bold;
+  font-weight: 500;
   list-style: none;
-  color: white;
+  color: #1c1c1c;
 }
 
 .header__nav a {
