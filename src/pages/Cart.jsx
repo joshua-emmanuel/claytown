@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import prevIcon from '../assets/img/previous-icon.svg';
 import CartProduct from '../components/CartProduct';
+import { formatProductPrice } from '../utils';
 import '../assets/css/Cart.css';
 
 function Cart() {
@@ -29,9 +30,9 @@ function Cart() {
             </div>
             <div className="cart__summary--mobile">
               <div>
-                <p>Total amount - NGN {totalPrice}</p>
-                <p>Shipping fee - NGN 700</p>
-                <p>Total - NGN {totalPrice + 700}</p>
+                <p>Total amount - NGN{formatProductPrice(totalPrice)}</p>
+                <p>Shipping fee - NGN700</p>
+                <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
               </div>
               <button className="checkout-button">Checkout</button>
               <div>
@@ -39,6 +40,40 @@ function Cart() {
                   Back to home
                 </Link>
               </div>
+            </div>
+          </div>
+          <div className="cart__summary--desktop">
+            <div>
+              <h2 className="font-condensed">Cart Summary</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.map((cartItem) => (
+                    <tr key={cartItem.id}>
+                      <td>{cartItem.name}</td>
+                      <td>{cartItem.quantity}</td>
+                      <td>NGN {formatProductPrice(cartItem.price)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div>
+                <p>Total Amount - NGN{formatProductPrice(totalPrice)}</p>
+                <p>Shipping Fee - NGN700</p>
+                <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
+                <button className="checkout-button">Checkout</button>
+              </div>
+            </div>
+            <div>
+              <Link className="homepage-link" to="/">
+                Back to home
+              </Link>
             </div>
           </div>
         </div>
