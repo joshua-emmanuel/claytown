@@ -1,0 +1,121 @@
+.cart__product {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.cart__product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.cart__product-grid > div:nth-child(2) {
+  margin-left: auto;
+}
+
+.cart__product-grid > div:has(.cart__product-img) {
+  display: flex;
+  align-items: start;
+  gap: 0.87rem;
+  line-height: normal;
+}
+
+.cart__product-img {
+  width: 3.75rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.cart__product-name {
+  margin-bottom: 0.81rem;
+}
+
+.cart__product-name + p {
+  font-size: 1.125rem;
+  color: #ff7810;
+}
+
+.cart__product-price {
+  font-size: 0.875rem;
+}
+
+.cart__product-grid > div:has(.cart__product-price) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.cart__product-price + div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart__product-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: none;
+}
+
+.cart__product-remove-btn {
+  display: none;
+  position: absolute;
+  left: 2.5rem;
+  bottom: 0.5rem;
+  border: none;
+  background: none;
+  color: #ff7810;
+}
+
+@media (min-width: 45rem) {
+  .cart__product-img {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width: 65rem) {
+  .cart__product {
+    padding-bottom: 2rem;
+  }
+
+  .cart__product-img {
+    width: 8.25rem;
+  }
+
+  .cart__product-name {
+    font-size: 1.5625rem;
+  }
+
+  .cart__product-grid > div:has(.cart__product-img) {
+    display: flex;
+    align-items: center;
+    gap: 0.87rem;
+    line-height: normal;
+  }
+
+  .cart__product-price {
+    font-size: 1.5625rem;
+  }
+
+  .cart__product-price + p {
+    font-size: 1.875rem;
+  }
+
+  .cart__product-remove-btn {
+    display: flex;
+    place-items: center;
+  }
+}
