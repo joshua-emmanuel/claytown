@@ -1,7 +1,6 @@
 import { useCartContext } from '../context/CartContext';
 import NavBar from '../components/NavBar';
 import prevIcon from '../assets/img/previous-icon.svg';
-import products from '../data/products';
 import CartProduct from '../components/CartProduct';
 import '../assets/css/Cart.css';
 
