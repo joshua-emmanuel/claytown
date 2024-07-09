@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useCartContext } from '../context/CartContext';
 
 function Product({ product }) {
-  const { cart, addToCart } = useCartContext();
+  const { addToCart } = useCartContext();
   const { name, price, img } = product;
 
   return (
@@ -60,7 +60,6 @@ function Product({ product }) {
         className="product__btn"
         onClick={() => {
           addToCart(product);
-          setShowCart(true);
         }}
       >
         Add to cart
