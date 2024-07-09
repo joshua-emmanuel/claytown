@@ -34,13 +34,13 @@ function NavBar() {
         <nav className="header__nav">
           <ul className="flex font-condensed">
             <li>
-              <a href="">Home</a>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
-              <a href="">Products</a>
+              <Link to={'/products'}>Products</Link>
             </li>
             <li>
-              <a href="">About us</a>
+              <Link to={'/'}>About us</Link>
             </li>
           </ul>
         </nav>
