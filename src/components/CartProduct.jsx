@@ -1,9 +1,6 @@
 import { useCartContext } from '../context/CartContext';
 import '../assets/css/CartProduct.css';
-
-function formatProductPrice(price) {
-  return price.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');
-}
+import { formatProductPrice } from '../utils';
 
 function CartProduct({ product }) {
   const { removeFromCart, increaseQuantity, decreaseQuantity } =
