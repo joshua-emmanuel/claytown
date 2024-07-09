@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
 
 function Product({ product }) {
   const { addToCart } = useCartContext();
   const { name, price, img } = product;
+  const navigate = useNavigate();
 
   return (
     <div className="product">
@@ -60,6 +61,7 @@ function Product({ product }) {
         className="product__btn"
         onClick={() => {
           addToCart(product);
+          navigate('/cart');
         }}
       >
         Add to cart
