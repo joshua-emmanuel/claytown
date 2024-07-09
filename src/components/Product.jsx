@@ -1,4 +1,8 @@
+import { useState } from 'react';
+import { useCartContext } from '../context/CartContext';
+
 function Product({ product }) {
+  const { cart, addToCart } = useCartContext();
   const { name, price, img } = product;
 
   return (
@@ -52,7 +56,15 @@ function Product({ product }) {
           />
         </svg>
       </p>
-      <button className="product__btn">Add to cart</button>
+      <button
+        className="product__btn"
+        onClick={() => {
+          addToCart(product);
+          setShowCart(true);
+        }}
+      >
+        Add to cart
+      </button>
     </div>
   );
 }
