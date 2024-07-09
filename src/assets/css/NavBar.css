@@ -30,7 +30,8 @@
   gap: 2rem;
 }
 
-.header__icons button {
+.header__icons button,
+.header__icons a {
   cursor: pointer;
   border: none;
   background-color: transparent;
