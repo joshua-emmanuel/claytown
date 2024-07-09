@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/img/claytown-logo-black.svg';
 import '../assets/css/NavBar.css';
 
@@ -59,7 +60,7 @@ function NavBar() {
               />
             </svg>
           </button>
-          <button>
+          <Link to={'/cart'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -72,7 +73,7 @@ function NavBar() {
                 fill="#1C1C1C"
               />
             </svg>
-          </button>
+          </Link>
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
