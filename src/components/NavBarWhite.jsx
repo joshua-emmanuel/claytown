@@ -1,5 +1,6 @@
 import logo from '../assets/img/claytown-logo.svg';
 import '../assets/css/NavBar.css';
+import { Link } from 'react-router-dom';
 
 function NavBarWhite() {
   return (
@@ -33,13 +34,13 @@ function NavBarWhite() {
         <nav className="header__nav">
           <ul className="flex font-condensed">
             <li>
-              <a href="">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="">Products</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="">About us</a>
+              <a href="/#about-us">About us</a>
             </li>
           </ul>
         </nav>
@@ -59,7 +60,7 @@ function NavBarWhite() {
               />
             </svg>
           </button>
-          <button>
+          <Link to="/cart">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -72,7 +73,7 @@ function NavBarWhite() {
                 fill="white"
               />
             </svg>
-          </button>
+          </Link>
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"

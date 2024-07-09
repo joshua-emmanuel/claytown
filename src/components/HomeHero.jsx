@@ -1,10 +1,11 @@
-import NavBar from './NavBar';
+import NavBarWhite from './NavBarWhite';
 import '../assets/css/HomeHero.css';
+import { Link } from 'react-router-dom';
 
 function HomeHero() {
   return (
     <div className="hero-bg">
-      <NavBar />
+      <NavBarWhite />
       <div className="hero">
         <div className="wrapper">
           <div className="hero__content">
@@ -17,7 +18,7 @@ function HomeHero() {
               Discover handmade clay home decor items crafted by the finest
               artisans from around the world
             </p>
-            <button>
+            <Link to="/products">
               <span>Shop now</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +32,7 @@ function HomeHero() {
                   fill="black"
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
