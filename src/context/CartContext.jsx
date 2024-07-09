@@ -4,7 +4,7 @@ const Context = createContext();
 
 const initialCart = () => {
   const cartFromLocalStorage = localStorage.getItem('cart');
-  if (cartFromLocalStorage !== undefined && cartFromLocalStorage === null) {
+  if (cartFromLocalStorage !== undefined && cartFromLocalStorage !== null) {
     return JSON.parse(cartFromLocalStorage);
   }
   return [];
