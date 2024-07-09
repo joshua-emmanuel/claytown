@@ -2,6 +2,7 @@ import NavBar from '../components/NavBar';
 import '../assets/css/Products.css';
 import Product from '../components/Product';
 import products from '../data/products';
+import Footer from '../components/Footer';
 
 function Products() {
   return (
@@ -17,6 +18,7 @@ function Products() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
