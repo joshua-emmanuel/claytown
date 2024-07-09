@@ -13,7 +13,7 @@ function Products() {
           <h1 className="font-condensed">Products</h1>
           <div className="products__list">
             {products.map((product) => (
-              <Product key={product.src} product={product} />
+              <Product key={product.id} product={product} />
             ))}
           </div>
         </div>
