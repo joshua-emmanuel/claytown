@@ -71,8 +71,10 @@
 }
 
 .cart__product-remove-btn {
-  display: none;
+  display: flex;
+  place-items: center;
   position: absolute;
+  font-size: 0.875rem;
   left: 2.5rem;
   bottom: 0.5rem;
   border: none;
@@ -115,7 +117,6 @@
   }
 
   .cart__product-remove-btn {
-    display: flex;
-    place-items: center;
+    font-size: 1rem;
   }
 }
