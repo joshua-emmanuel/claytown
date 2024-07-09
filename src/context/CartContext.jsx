@@ -17,6 +17,10 @@ export function CartContext({ children }) {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
+  const totalPrice = cart.reduce((accAmount, currentCartItem) => {
+    return currentCartItem.price * currentCartItem.quantity + accAmount;
+  }, 0);
+
   function addToCart(product) {
     const productIndexInCart = cart.findIndex(
       (cartItem) => cartItem.id === product.id
@@ -91,6 +95,7 @@ export function CartContext({ children }) {
         removeFromCart,
         increaseQuantity,
         decreaseQuantity,
+        totalPrice,
       }}
     >
       {children}
