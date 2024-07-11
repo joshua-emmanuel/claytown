@@ -30,7 +30,7 @@ function CartProduct({ product }) {
         </div>
         <div>
           <p className="cart__product-price">
-            NGN {formatProductPrice(product.price)}
+            NGN {formatProductPrice(product.price * product.quantity)}
           </p>
           <div>
             <button
