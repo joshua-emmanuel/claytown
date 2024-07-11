@@ -45,25 +45,27 @@ function Cart() {
           <div className="cart__summary--desktop">
             <div>
               <h2 className="font-condensed">Cart Summary</h2>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Item Name</th>
-                    <th>Quantity</th>
-                    <th>Cost</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cart.map((cartItem) => (
-                    <tr key={cartItem.id}>
-                      <td>{cartItem.name}</td>
-                      <td>{cartItem.quantity}</td>
-                      <td>NGN {formatProductPrice(cartItem.price)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div>
+              <div className="cart__summary-grids">
+                <div className="cart__summary-grid">
+                  <h3>Item Name</h3>
+                  <h3>Quantity</h3>
+                  <h3>Cost</h3>
+                </div>
+                {cart.map((cartItem) => (
+                  <div
+                    className="cart__summary-grid font-montserrat"
+                    key={cartItem.id}
+                  >
+                    <p>{cartItem.name}</p>
+                    <p>{cartItem.quantity}</p>
+                    <p>
+                      NGN
+                      {formatProductPrice(cartItem.price * cartItem.quantity)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="cart__summary-prices">
                 <p>Total Amount - NGN{formatProductPrice(totalPrice)}</p>
                 <p>Shipping Fee - NGN700</p>
                 <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
@@ -71,7 +73,7 @@ function Cart() {
               </div>
             </div>
             <div>
-              <Link className="homepage-link" to="/">
+              <Link className="homepage-link font-montserrat" to="/">
                 Back to home
               </Link>
             </div>
