@@ -11,6 +11,7 @@
 
   font-size: 1.25rem;
   font-weight: 500;
+  margin-bottom: 1.44rem;
 }
 
 .cart__header a {
@@ -23,7 +24,16 @@
   border-bottom: 1px solid hsla(87, 4%, 49%, 0.4);
 }
 
+.cart__summary--mobile:has(> .checkout-button) {
+  display: flex;
+  justify-content: center;
+}
+
 .checkout-button {
+  display: block;
+  max-width: fit-content;
+  text-decoration: none;
+  font-size: 1.125rem;
   padding: 0.5rem 1.4375rem;
   border-radius: 3rem;
   border: 1px solid rgba(28, 28, 28, 0.38);
@@ -33,14 +43,14 @@
 }
 
 .cart__summary--mobile {
-  padding-block: 1.5rem;
+  padding-block: 1.38rem;
   text-align: center;
 }
 
 .cart__summary--mobile > div {
   text-align: right;
   font-size: 0.875rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .homepage-link {
@@ -108,6 +118,11 @@
   text-align: right;
   font-size: 1.5625rem;
   margin-top: 3.88rem;
+}
+
+.cart__summary--desktop div:has(> .checkout-button) {
+  display: flex;
+  justify-content: end;
 }
 
 .cart__summary--desktop .checkout-button {
