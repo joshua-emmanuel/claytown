@@ -34,9 +34,11 @@ function Cart() {
                 <p>Shipping fee - NGN700</p>
                 <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
               </div>
-              <button className="checkout-button">Checkout</button>
               <div>
-                <Link className="homepage-link" to="/">
+                <Link className="checkout-button">Checkout</Link>
+              </div>
+              <div>
+                <Link className="homepage-link font-montserrat" to="/">
                   Back to home
                 </Link>
               </div>
@@ -69,7 +71,9 @@ function Cart() {
                 <p>Total Amount - NGN{formatProductPrice(totalPrice)}</p>
                 <p>Shipping Fee - NGN700</p>
                 <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
-                <button className="checkout-button">Checkout</button>
+                <div>
+                  <Link className="checkout-button">Checkout</Link>
+                </div>
               </div>
             </div>
             <div>
