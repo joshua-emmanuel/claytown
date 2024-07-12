@@ -94,7 +94,7 @@ button {
 .wrapper {
   max-width: 85rem;
   margin-inline: auto;
-  padding: 2rem;
+  padding-inline: 2rem;
 }
 
 .flex {
@@ -107,4 +107,8 @@ button {
 
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
+}
+
+.font-gloria {
+  font-family: 'Gloria Hallelujah', cursive;
 }
