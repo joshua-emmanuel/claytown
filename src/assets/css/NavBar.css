@@ -1,3 +1,7 @@
+.header {
+  padding-block: 1.69rem;
+}
+
 .header .flex {
   justify-content: space-between;
   align-items: center;
@@ -7,8 +11,10 @@
   display: none;
 }
 
-.header__logo img {
-  width: 12rem;
+.header__logo a svg path,
+.nav-toggle svg path {
+  color: #1c1c1c;
+  fill: #1c1c1c;
 }
 
 .header__nav .flex {
@@ -76,7 +82,7 @@
 }
 
 @media (max-width: 35em) {
-  .header__logo img {
+  .header__logo svg {
     width: 8rem;
   }
 
