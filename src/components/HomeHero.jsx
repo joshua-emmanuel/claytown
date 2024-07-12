@@ -1,11 +1,11 @@
-import NavBarWhite from './NavBarWhite';
+import NavBar from './NavBar';
 import '../assets/css/HomeHero.css';
 import { Link } from 'react-router-dom';
 
 function HomeHero() {
   return (
     <div className="hero-bg">
-      <NavBarWhite />
+      <NavBar />
       <div className="hero">
         <div className="wrapper">
           <div className="hero__content">

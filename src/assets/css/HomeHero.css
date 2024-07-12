@@ -1,12 +1,22 @@
 .hero-bg {
-  background-image: url('../img/hero-bg.png');
+  background-image: url('../img/hero-bg.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.hero-bg .header__logo a svg path,
+.hero-bg .nav-toggle svg path {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
 .hero-bg .header__nav li {
-  color: white;
+  color: #ffffff;
+}
+
+.hero-bg .header__icons svg {
+  color: #fff;
 }
 
 .hero {
@@ -40,7 +50,7 @@
   text-decoration: none;
   font-size: 1.25rem;
   border: none;
-  padding: 1.125rem 1.5rem;
+  padding: 0.75rem 1.125rem;
   border-radius: 3rem;
   opacity: 0.66;
   color: #000;
@@ -54,12 +64,27 @@
   gap: 0.75rem;
 }
 
-@media (max-width: 35em) {
+@media (max-width: 46.5rem) {
   .hero__content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero__content p {
     font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .hero__content {
+    padding-top: 6.56rem;
+  }
+
+  .hero__content h1 {
+    font-size: 1.875rem;
+  }
+
+  .hero__content p {
+    margin-top: 3.1rem;
+    padding: 0.62rem;
   }
 }
