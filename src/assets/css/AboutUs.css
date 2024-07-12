@@ -41,28 +41,3 @@
     width: 45rem;
   }
 }
-
-@media (min-width: 80em) {
-  .about-us__content {
-    position: relative;
-  }
-
-  .about-us__content div {
-    position: absolute;
-    max-width: 22ch;
-  }
-
-  .about-us__content div:first-child {
-    left: 5%;
-    top: 2rem;
-  }
-
-  .about-us__content div:last-child {
-    right: 4rem;
-    bottom: -2rem;
-  }
-
-  .about-us__content img {
-    width: 45rem;
-  }
-}
