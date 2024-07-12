@@ -9,9 +9,10 @@ function AboutUs() {
         <div className="about-us__content">
           <div>
             <p>
-              Claytown is where tradition meets modern craftsmanship. We are
-              passionate artisans dedicated to bringing you the finest handmade
-              clay and wooden products from around the world
+              <span className="font-gloria">Claytown</span> is where tradition
+              meets modern craftsmanship. We are passionate artisans dedicated
+              to bringing you the finest handmade clay and wooden products from
+              around the world
             </p>
           </div>
           <img src={aboutUsImg} alt="Flower Vases" />
