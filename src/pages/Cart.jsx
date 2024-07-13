@@ -23,19 +23,78 @@ function Cart() {
                 Cart(<span>{cart.length}</span>)
               </p>
             </div>
-            <div className="cart__list">
-              {cart.map((cartItem) => (
-                <CartProduct key={cartItem.id} product={cartItem} />
-              ))}
-            </div>
-            <div className="cart__summary--mobile">
-              <div>
-                <p>Total amount - NGN{formatProductPrice(totalPrice)}</p>
-                <p>Shipping fee - NGN700</p>
-                <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
+            {cart.length !== 0 && (
+              <>
+                <div className="cart__list">
+                  {cart.map((cartItem) => (
+                    <CartProduct key={cartItem.id} product={cartItem} />
+                  ))}
+                </div>
+                <div className="cart__summary--mobile">
+                  <div>
+                    <p>Total amount - NGN{formatProductPrice(totalPrice)}</p>
+                    <p>Shipping fee - NGN700</p>
+                    <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
+                  </div>
+                  <div>
+                    <Link to="/checkout" className="checkout-button">
+                      Checkout
+                    </Link>
+                  </div>
+                  <div>
+                    <Link className="homepage-link font-montserrat" to="/">
+                      Back to home
+                    </Link>
+                  </div>
+                </div>
+              </>
+            )}
+            {cart.length === 0 && (
+              <div className="empty-cart">
+                <p>
+                  Cart is empty. <br />
+                  Add some products and come back
+                </p>
+                <Link className="empty-cart__btn" to="/products">
+                  View Products
+                </Link>
               </div>
+            )}
+          </div>
+          {cart.length !== 0 && (
+            <div className="cart__summary--desktop">
               <div>
-                <Link className="checkout-button">Checkout</Link>
+                <h2 className="font-condensed">Cart Summary</h2>
+                <div className="cart__summary-grids">
+                  <div className="cart__summary-grid">
+                    <h3>Item Name</h3>
+                    <h3>Quantity</h3>
+                    <h3>Cost</h3>
+                  </div>
+                  {cart.map((cartItem) => (
+                    <div
+                      className="cart__summary-grid font-montserrat"
+                      key={cartItem.id}
+                    >
+                      <p>{cartItem.name}</p>
+                      <p>{cartItem.quantity}</p>
+                      <p>
+                        NGN
+                        {formatProductPrice(cartItem.price * cartItem.quantity)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="cart__summary-prices">
+                  <p>Total Amount - NGN{formatProductPrice(totalPrice)}</p>
+                  <p>Shipping Fee - NGN700</p>
+                  <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
+                  <div>
+                    <Link to="/checkout" className="checkout-button">
+                      Checkout
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div>
                 <Link className="homepage-link font-montserrat" to="/">
@@ -43,45 +102,7 @@ function Cart() {
                 </Link>
               </div>
             </div>
-          </div>
-          <div className="cart__summary--desktop">
-            <div>
-              <h2 className="font-condensed">Cart Summary</h2>
-              <div className="cart__summary-grids">
-                <div className="cart__summary-grid">
-                  <h3>Item Name</h3>
-                  <h3>Quantity</h3>
-                  <h3>Cost</h3>
-                </div>
-                {cart.map((cartItem) => (
-                  <div
-                    className="cart__summary-grid font-montserrat"
-                    key={cartItem.id}
-                  >
-                    <p>{cartItem.name}</p>
-                    <p>{cartItem.quantity}</p>
-                    <p>
-                      NGN
-                      {formatProductPrice(cartItem.price * cartItem.quantity)}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="cart__summary-prices">
-                <p>Total Amount - NGN{formatProductPrice(totalPrice)}</p>
-                <p>Shipping Fee - NGN700</p>
-                <p>Total - NGN{formatProductPrice(totalPrice + 700)}</p>
-                <div>
-                  <Link className="checkout-button">Checkout</Link>
-                </div>
-              </div>
-            </div>
-            <div>
-              <Link className="homepage-link font-montserrat" to="/">
-                Back to home
-              </Link>
-            </div>
-          </div>
+          )}
         </div>
       </main>
     </>
