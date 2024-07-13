@@ -53,7 +53,11 @@ export default function SingleProduct() {
       <main>
         <div className="wrapper">
           {isLoading && <LoadingStatus>Loading product...</LoadingStatus>}
-          {isError && <LoadingStatus>Oops! An error occured</LoadingStatus>}
+          {isError && (
+            <LoadingStatus>
+              Oops! An error occured. Please refresh your browser.
+            </LoadingStatus>
+          )}
           {isDone && (
             <div className="product__grid">
               <img src={product.img} alt="" />

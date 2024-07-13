@@ -84,7 +84,7 @@ function Products() {
             <button>Tableware</button>
           </div>
           {isLoading && <LoadingStatus>Loading products...</LoadingStatus>}
-          {isError && <LoadingStatus>Oops! An error occured</LoadingStatus>}
+          {isError && <LoadingStatus>Oops! An error occured. Please refresh your browser.</LoadingStatus>}
           <div className="products__list">
             {isDone &&
               currentProducts.map((product) => (
