@@ -23,11 +23,9 @@ function Products() {
       }
     )
       .then((response) => {
-        console.log(response);
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         const items = data.items;
         const products = items.map((item) => {
           return {
