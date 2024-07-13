@@ -20,7 +20,7 @@ function Products() {
         headers: {
           'Content-Type': 'application/json',
         },
-        redirect: 'error',
+        credentials: true,
       }
     )
       .then((response) => {
