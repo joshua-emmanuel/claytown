@@ -133,7 +133,7 @@
 }
 
 .payment-btn--lg {
-  display: block;
+  display: none;
   text-decoration: none;
   padding: 1.125rem 2.5rem;
   border-radius: 3rem;
@@ -296,6 +296,10 @@
   }
 
   .order-summary--lg {
+    display: block;
+  }
+
+  .payment-btn--lg {
     display: block;
   }
 }
