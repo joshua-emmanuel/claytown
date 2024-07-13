@@ -9,6 +9,7 @@
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
   justify-content: space-between;
   text-align: left;
   margin-bottom: 5.37rem;
