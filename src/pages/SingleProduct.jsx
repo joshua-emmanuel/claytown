@@ -31,13 +31,14 @@ export default function SingleProduct() {
           id: data.id,
           name: data.name,
           price: data.current_price,
-          decription: data.decription,
+          description: data.description,
           img: `https://api.timbu.cloud/images/${data.photos[0].url}`,
         };
+        console.log(product);
         setProduct(product);
         setStatus('done');
       })
-      .catch((error) => {
+      .catch(() => {
         setStatus('error');
       });
   }, []);
@@ -58,15 +59,7 @@ export default function SingleProduct() {
               <img src={product.img} alt="" />
               <div className="product__content">
                 <h1 className="font-condensed">{product.name}</h1>
-                <p>
-                  {product.decription !== undefined
-                    ? product.decription
-                    : `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                  alias non ad aut exercitationem culpa, eum consectetur quas
-                  cumque, temporibus porro ut nulla ex facilis deleniti
-                  distinctio cum laborum facere ratione autem numquam voluptas
-                  hic et. Fugit at optio voluptatibus.`}
-                </p>
+                <p>{product.description}</p>
                 <p>Price: NGN{formatProductPrice(product.price)}</p>
                 <button
                   onClick={() => {
