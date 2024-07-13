@@ -50,7 +50,6 @@ function Products() {
       .then((data) => {
         const items = data.items;
         const products = items.map((item) => {
-          // if (item.name === 'Soup bowl') console.log(item);
           return {
             id: item.id,
             name: item.name,
