@@ -199,7 +199,7 @@ export default function Checkout() {
                     </div>
                     <div className="flex">
                       <p>Shipping</p>
-                      <p>NGN700</p>
+                      <p className="shipping-fee">NGN700</p>
                     </div>
                     <div className="flex">
                       <p>Coupon Applied</p>
@@ -239,7 +239,7 @@ export default function Checkout() {
                   </div>
                   <div className="flex">
                     <p>Shipping</p>
-                    <p>NGN700</p>
+                    <p className="shipping-fee">NGN700</p>
                   </div>
                   <div className="flex">
                     <p>Coupon Applied</p>

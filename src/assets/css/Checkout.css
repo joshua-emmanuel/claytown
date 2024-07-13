@@ -279,6 +279,10 @@
   outline-color: #da9031;
 }
 
+.shipping-fee {
+  color: rgba(28, 28, 28, 0.7);
+}
+
 @media (min-width: 65em) {
   .checkout-grid {
     display: grid;
