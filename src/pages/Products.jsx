@@ -14,15 +14,16 @@ function Products() {
   const APP_ID = import.meta.env.VITE_APP_ID;
 
   useEffect(() => {
-    fetch(
-      `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: true,
-      }
-    )
+    window
+      .fetch(
+        `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          redirect: 'error',
+        }
+      )
       .then((response) => {
         return response.text();
       })
