@@ -84,6 +84,7 @@ textarea:not([rows]) {
 
 body {
   font-family: 'Futura', sans-serif;
+  color: #1c1c1c;
   background-color: #f7f0dd;
 }
 
