@@ -15,12 +15,7 @@ function Products() {
 
   useEffect(() => {
     fetch(
-      `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
+      `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`
     )
       .then((response) => {
         return response.json();
