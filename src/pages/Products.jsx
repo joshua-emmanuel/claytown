@@ -17,8 +17,12 @@ function Products() {
     fetch(
       `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        return response.json();
+      })
       .then((data) => {
+        console.log(data);
         const items = data.items;
         const products = items.map((item) => {
           return {
@@ -32,7 +36,8 @@ function Products() {
         setProducts(products);
         setStatus('done');
       })
-      .catch(() => {
+      .catch((error) => {
+        console.log(error);
         setStatus('error');
       });
   }, []);
