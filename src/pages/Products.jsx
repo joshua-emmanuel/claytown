@@ -23,21 +23,22 @@ function Products() {
       }
     )
       .then((response) => {
-        return response.json();
+        return response;
       })
       .then((data) => {
-        const items = data.items;
-        const products = items.map((item) => {
-          return {
-            id: item.id,
-            name: item.name,
-            price: item.current_price[0].NGN[0],
-            description: item.description,
-            img: `https://api.timbu.cloud/images/${item.photos[0].url}`,
-          };
-        });
-        setProducts(products);
-        setStatus('done');
+        console.log(data);
+        // const items = data.items;
+        // const products = items.map((item) => {
+        //   return {
+        //     id: item.id,
+        //     name: item.name,
+        //     price: item.current_price[0].NGN[0],
+        //     description: item.description,
+        //     img: `https://api.timbu.cloud/images/${item.photos[0].url}`,
+        //   };
+        // });
+        // setProducts(products);
+        // setStatus('done');
       })
       .catch((error) => {
         console.log(error);
