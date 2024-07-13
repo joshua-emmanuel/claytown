@@ -27,7 +27,6 @@
   max-width: 8rem;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 0.5rem;
 }
 
 .product > .flex:has(> .product__like-btn) {
@@ -90,9 +89,7 @@
 
 @media (min-width: 65em) {
   .products__list {
-    /* gap: 4.69rem; */
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 4.69rem;
   }
 
   .products__list p {
@@ -101,7 +98,6 @@
 
   p.product__price {
     font-size: 1.125rem;
-    /* margin-bottom: 1.3rem; */
   }
 
   .product__btn {
