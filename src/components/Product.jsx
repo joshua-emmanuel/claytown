@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
+import { formatProductPrice } from '../utils';
 
 function Product({ product }) {
   const { addToCart } = useCartContext();
@@ -26,7 +27,7 @@ function Product({ product }) {
           </svg>
         </button>
       </div>
-      <p className="product__price">NGN {price}</p>
+      <p className="product__price">NGN {formatProductPrice(price)}</p>
       <p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
