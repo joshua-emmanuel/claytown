@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../context/CartContext';
 import NavBar from '../components/NavBar';
 import '../assets/css/Checkout.css';
+import { formatProductPrice } from '../utils';
 
 export default function Checkout() {
+  const { totalPrice } = useCartContext();
+
   return (
     <>
       <NavBar />
@@ -10,7 +14,7 @@ export default function Checkout() {
         <div className="wrapper">
           <div className="checkout-grid">
             <div className="checkout">
-              <Link className="back-arrow">
+              <Link to="/cart" className="back-arrow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="33"
@@ -191,7 +195,7 @@ export default function Checkout() {
                   <div className="grid-group">
                     <div className="flex">
                       <p>Price</p>
-                      <p>NGN 61,600</p>
+                      <p>{formatProductPrice(totalPrice)}</p>
                     </div>
                     <div className="flex">
                       <p>Discount</p>
@@ -209,7 +213,7 @@ export default function Checkout() {
                   <div className="grid-group">
                     <div className="flex">
                       <p>TOTAL</p>
-                      <p>NGN 62,300</p>
+                      <p>{formatProductPrice(totalPrice + 700)}</p>
                     </div>
                   </div>
                   <div className="grid-group">
@@ -231,7 +235,7 @@ export default function Checkout() {
                 <div className="grid-group">
                   <div className="flex">
                     <p>Price</p>
-                    <p>NGN 61,600</p>
+                    <p>{formatProductPrice(totalPrice)}</p>
                   </div>
                   <div className="flex">
                     <p>Discount</p>
@@ -249,7 +253,7 @@ export default function Checkout() {
                 <div className="grid-group">
                   <div className="flex">
                     <p>TOTAL</p>
-                    <p>NGN 62,300</p>
+                    <p>{formatProductPrice(totalPrice + 700)}</p>
                   </div>
                 </div>
                 <div className="grid-group">

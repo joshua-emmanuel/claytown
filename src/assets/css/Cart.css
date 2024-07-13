@@ -193,4 +193,8 @@ div:has(> .checkout-button) {
   .cart__summary--desktop {
     display: block;
   }
+
+  .empty-cart {
+    font-size: 1.5625rem;
+  }
 }
