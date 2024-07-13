@@ -110,10 +110,10 @@
 }
 
 .pagination button {
-  width: 3.06363rem;
-  height: 1.91475rem;
+  width: 2rem;
+  height: 1rem;
   border: 0.5px solid #53524e;
-  padding: 0.37rem 0.95rem;
+  padding: 1rem 0.25rem;
   background: none;
 
   display: flex;
@@ -138,6 +138,18 @@
 @media (min-width: 45em) {
   .products__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pagination button {
+    width: 3.06363rem;
+    height: 1.91475rem;
+    border: 0.5px solid #53524e;
+    padding: 0.37rem 0.95rem;
+    background: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
