@@ -101,9 +101,7 @@ export default function Pagination({
         </svg>
       </button>
       <button
-        onClick={() =>
-          handlePagination(Math.ceil(products.length / productsPerPage))
-        }
+        onClick={() => handlePagination(Math.ceil(length / productsPerPage))}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
