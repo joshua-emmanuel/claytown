@@ -50,9 +50,9 @@ function Products() {
       <main className="products">
         <div className="wrapper">
           <h1 className="font-condensed">Products</h1>
+          {isLoading && <LoadingStatus>Loading products...</LoadingStatus>}
+          {isError && <LoadingStatus>Oops! An error occured</LoadingStatus>}
           <div className="products__list">
-            {isLoading && <LoadingStatus>Loading products...</LoadingStatus>}
-            {isError && <LoadingStatus>Oops! An error occured</LoadingStatus>}
             {isDone &&
               products.map((product) => (
                 <Product key={product.id} product={product} />
