@@ -32,7 +32,7 @@ export default function Checkout() {
                 <h2>Address</h2>
                 <div className="address">
                   <div>
-                    <input type="radio" defaultChecked />
+                    <input type="radio" name="address" defaultChecked />
                     <div>
                       <h3>Lagos, Nigeria</h3>
                       <p>Ojuelegba</p>
@@ -43,7 +43,7 @@ export default function Checkout() {
                 </div>
                 <div className="address">
                   <div>
-                    <input type="radio" />
+                    <input type="radio" name="address" />
                     <div>
                       <h3>University of Lagos</h3>
                       <p>Akoka</p>
