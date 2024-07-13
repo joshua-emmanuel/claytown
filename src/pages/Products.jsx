@@ -18,7 +18,6 @@ function Products() {
       `/api/products?organization_id=${ORG_ID}&Appid=${APP_ID}&Apikey=${API_KEY}`,
       {
         headers: {
-          Accept: 'application/json',
           'Content-Type': 'application/json',
         },
       }
