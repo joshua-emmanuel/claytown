@@ -34,7 +34,6 @@ export default function SingleProduct() {
           description: data.description,
           img: `https://api.timbu.cloud/images/${data.photos[0].url}`,
         };
-        console.log(product);
         setProduct(product);
         setStatus('done');
       })

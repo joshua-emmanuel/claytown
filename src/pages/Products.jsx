@@ -61,8 +61,7 @@ function Products() {
         setProducts(products);
         setStatus('done');
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         setStatus('error');
       });
   }, []);
