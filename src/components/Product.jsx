@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
 import { formatProductPrice } from '../utils';
 
 function Product({ product }) {
   const { addToCart } = useCartContext();
-  const { name, price, img } = product;
+  const { id, name, price, img } = product;
   const navigate = useNavigate();
 
   return (
@@ -67,6 +67,7 @@ function Product({ product }) {
       >
         Add to cart
       </button>
+      <Link className="product__page-link" to={`/products/${id}`}></Link>
     </div>
   );
 }
