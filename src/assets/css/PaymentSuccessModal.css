@@ -1,0 +1,27 @@
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-modal-content {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  background-color: white;
+}
+
+.payment-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
