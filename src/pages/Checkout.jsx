@@ -1,11 +1,23 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCartContext } from '../context/CartContext';
+import { formatProductPrice } from '../utils';
+import PaymentSuccessModal from '../components/PaymentSuccessModal';
 import NavBar from '../components/NavBar';
 import '../assets/css/Checkout.css';
-import { formatProductPrice } from '../utils';
+import { useState } from 'react';
 
 export default function Checkout() {
-  const { totalPrice } = useCartContext();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const { totalPrice, emptyCart } = useCartContext();
+  const navigate = useNavigate();
+
+  function handleModalVisibility() {
+    setIsModalVisible(true);
+    setTimeout(() => {
+      emptyCart();
+      navigate('/cart');
+    }, 3000);
+  }
 
   return (
     <>
@@ -189,7 +201,9 @@ export default function Checkout() {
                   <span>Add card</span>
                 </button>
               </div>
-              <Link className="payment-btn--lg">Pay now</Link>
+              <Link className="payment-btn--lg" onClick={handleModalVisibility}>
+                Pay now
+              </Link>
               <div className="order-summary--md">
                 <div>
                   <div className="grid-group">
@@ -224,7 +238,12 @@ export default function Checkout() {
                   </div>
                   <div>
                     <input type="text" placeholder="Voucher code" />
-                    <Link className="payment-btn">Pay now</Link>
+                    <Link
+                      className="payment-btn"
+                      onClick={handleModalVisibility}
+                    >
+                      Pay now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -264,13 +283,16 @@ export default function Checkout() {
                 </div>
                 <div>
                   <input type="text" placeholder="Voucher code" />
-                  <Link className="payment-btn">Pay now</Link>
+                  <Link className="payment-btn" onClick={handleModalVisibility}>
+                    Pay now
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
+      {isModalVisible && <PaymentSuccessModal />}
     </>
   );
 }
