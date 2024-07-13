@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://api.timbu.cloud',
+        target: 'https://api.timbu.cloud',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
